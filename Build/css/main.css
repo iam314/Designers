@@ -382,7 +382,7 @@ section {
 ul.workfilters {
   list-style: none;
   display: flex;
-  background-color: #d6d6d6;
+  background-color: #e3e3e3;
   padding: 10px 0 12px 0; }
 
 ul.workfilters a {
