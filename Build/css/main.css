@@ -381,12 +381,17 @@ section {
 
 ul.workfilters {
   list-style: none;
-  display: flex; }
+  display: flex;
+  background-color: #d6d6d6;
+  padding: 10px 0 12px 0; }
 
 ul.workfilters a {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.8em;
+  text-transform: uppercase;
+  padding-right: 25px;
+  padding-left: 25px;
   color: #1a1717;
   text-decoration: none; }
 
