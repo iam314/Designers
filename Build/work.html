@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<title>
+		Melon Designers Team | Welcome
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="DevCon">
+	<meta name="author" content="Lyudmil Dachev">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
+	<!-- Le styles -->
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="Site">
+	<main class="Site-content">
+<section class="gray">
+
+  <nav class="container">
+    <div class="row">
+      <div class="col col--12-of-12">
+        <a href="index.html" class="current-parent logo"></a>
+        <span class="hamburger hidedesktop" onclick="openNav()">☰</span>
+        <ul class="topnav">
+          <li><a href="index.html#whatwedo">What we do</a></li>
+          <li class='current'><a class='current' href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+          <li>
+             <button class="contact-btn">Contact</button>
+           </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="index.html#whatwedo">What we do</a>
+      <a href="about.html">About</a>
+      <a class='current' href="work.html">Work</a>
+      <!-- <a href="contact.html">Contact</a> -->
+       <!-- Trigger/Open The Modal -->
+        <button class="contact-btn">Contact</button>
+
+    </div>
+
+  </nav>
+</section>
+
+<section class="container-fluid gray">
+<div class="container">
+  <div class="row">
+    <div class="col col--12-of-12 blue">
+      <ul class="workfilters">
+        <li><a href="">all categories</a></li>
+        <li><a href="">web</a></li>
+        <li><a href="">mobile</a></li>
+        <li><a href="">ux/ui</a></li>
+        <li><a href="">other</a></li>
+      </ul>
+    </div>
+      <h2 class="center spacing">Work</h2>
+
+
+    <a class="ctabutton2" href="contact.html">Let's talk</a>
+    </div>
+  </div>
+</section>
+
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<h3>email:</h3><br>
+		<p>design@melontech.com</p><br>
+		<h3>Behace</h3><br>
+		<p>www.behance.net/design9859</p><br>
+		<h3>Office</h3><br>
+		<p>20 Kosta Lulchev, 3rd floor.<br>
+1113, Sofia, Bulgaria.</p><br>
+<h3>Melon</h3><br>
+<p>www.melontech.com</p>
+	</div>
+
+</div>
+
+
+
+</main>
+<section>
+	<footer class="container-fluid">
+		<div class="row">
+			<div class="col col--12-of-12">
+				<a href="index.html" class="current-parent footerlogo"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--9-of-12 col col--centered">
+				<div class="footer_navigation">
+					<ul>
+						<li><a href="index.html#whatwedo">What we do</a></li>
+						<li class='current'><a class='current' href="work.html">Work</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><button class="contact-btn">Contact</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--12-of-12">
+				<p class="copyright">Terms of Use | Privacy Policy | Cookie Policy | ©2019 Melon, Inc. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+</section>
+
+<script type="text/javascript">
+	/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "60%";
+		document.getElementById("main").style.marginLeft = "100px";
+	}
+
+	/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft = "0";
+	}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("contact-btn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+
+for (let item of btn) {
+	item.onclick = function() {
+	  modal.style.display = "block";
+	}
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+
+</html>

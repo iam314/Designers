@@ -1,0 +1,816 @@
+// Custom variables
+@import "variables";
+@import "grid";
+
+html {
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: white;
+}
+
+::selection {
+    background: $color-orange;
+    color: $color-black;
+    text-shadow: none;
+ }
+
+ .Site {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ .Site-content {
+   flex: 1;
+ }
+
+ section {
+   padding-left: 8%;
+   padding-right: 8%
+ }
+
+ .poster_bg {
+   background-color: $color-blue;
+   height: 100vh;
+ }
+// START NEW UNSORTED CODE
+.introbox {
+  max-width: 360px;
+}
+
+.whatbox {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.aboutbox {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.introduction {
+  max-width: 360px;
+}
+
+.gray {
+  background-color: $color-gray;
+}
+
+.blue {
+   background-color: $color-blue;
+}
+
+ul.workfilters {
+  list-style: none;
+  display: flex;
+}
+
+ul.workfilters a {
+  font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1.8em;
+	color: $color-black;
+  text-decoration: none;
+}
+
+.listingtype {
+  font-size: 1.6em;
+}
+ul.clientslist {
+margin-left: auto;
+margin-right: auto;
+padding: 0;
+webkit-column-count: 4;
+-moz-column-count: 4;
+column-count: 4;
+list-style: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: $color-green;
+  border: 24px solid $color-white;
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+}
+
+/* The Close Button */
+.close {
+  color: $color-black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-btn {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.8em;
+  color: $color-black;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+.contact-btn:hover {
+    color: $color-green;
+    font-weight: 400;
+    // padding-bottom: 0.2em;
+    // border-bottom: 0.2em solid;
+    text-decoration: none;
+}
+
+
+// STOP NEW UNSORTED CODE
+
+nav {
+  padding-bottom: 8%;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+	background-image: url(img/melon_logo.svg);
+	background-repeat: no-repeat;
+	height: 3.6em;
+	width: 9em;
+  margin-top: 3.3em;
+	float: left;
+	cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 4em;
+}
+
+nav ul li a {
+  font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1.8em;
+	color: $color-black;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: $color-green;
+  font-weight: 400;
+	// padding-bottom: 0.2em;
+	// border-bottom: 0.2em solid;
+	text-decoration: none;
+}
+
+nav li.current a {
+  	color: $color-green;
+    font-weight: 400;
+	// color: darken($color-green, 20%);
+	// padding-bottom: 0.2em;
+	// border-bottom: 0.2em solid;
+	text-decoration: none;
+}
+
+.ctabutton {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.8em;
+  box-sizing: border-box;
+  color: $color-white;
+  text-decoration: none;
+  cursor: pointer;
+  max-width: 160px;
+  padding: 1.6rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: $color-black;
+  display: block;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+  border-radius: 8px;
+  margin-left: -3px;
+  display: inline-block;
+}
+.ctabutton:hover {
+  // background-color: darken( $color-red, 20%);
+    background-color: $color-green;
+}
+
+.ctabutton2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.8em;
+  box-sizing: border-box;
+  color: $color-white;
+  text-decoration: none;
+  cursor: pointer;
+  max-width: 160px;
+  padding: 1.6rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: $color-red;
+  display: block;
+  margin: 5em auto 7.2em auto;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+.ctabutton2:hover {
+  // background-color: darken( $color-red, 20%);
+    background-color: $color-black;
+}
+
+.footerlogo {
+	background-image: url(melon_logo.svg);
+	background-repeat: no-repeat;
+	height: 4.5em;
+	width: 8em;
+	cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+	margin-top: 6%;
+}
+
+.footer_navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_navigation ul {
+	padding: 0;
+	margin-top: 3.6em;
+}
+
+.footer_navigation ul li a {
+  font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1.8em;
+	color: $color-black;
+  text-decoration: none;
+}
+
+.footer_navigation ul li a:hover {
+	color: $color-green;
+	text-decoration: none;
+}
+
+.footer_navigation li.current a {
+	color: $color-green;
+	text-decoration: none;
+}
+
+ul.logos {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 9em;
+}
+
+ul.logos li a {
+  display: block;
+  margin: 0 auto 4.8em auto;
+  max-width: 180px;
+}
+ul.logos li img {
+  display: block;
+  margin: 0 auto 4.8em auto;
+  max-width: 180px;
+}
+
+ul.logos li a:hover {
+  opacity: .9;
+}
+
+.logos li a > img{
+  max-height: 180px;
+  margin: 0 auto 4.8em auto;
+}
+
+
+ul.contact__link_list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  margin-bottom: 3.6em;
+}
+.contact__link_list a{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.8em;
+  line-height: 160%;
+	color: $color-red;
+  text-decoration: none;
+}
+
+.contact__link_list a:hover{
+  border-bottom: 1px solid $color-red;
+}
+
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 3.6em;
+  line-height: 125%;
+	color:$color-black;
+  margin-bottom: .6em;
+  display: inline-block;
+}
+
+h2 {
+  font-family: 'Roboto', monospace;
+  font-weight: 900;
+  font-size: 2.8em;
+  line-height: 125%;
+	margin-top: 1.2em;
+  margin-bottom: 1em;
+	color: $color-black;
+  display: inline-block;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-variant: normal;
+  font-size: 2.1em;
+  line-height: 125%;
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+  color: #002026;
+  display: inline-block;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-variant: normal;
+  font-size: 1.4em;
+  line-height: 125%;
+  margin-top: 2.1em;
+  margin-bottom: 0;
+  color: $color-black;
+  display: inline-block;
+}
+
+h5 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-variant: normal;
+  font-size: 4.8em;
+  line-height: 125%;
+	color:$color-black;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  display: inline-block;
+}
+
+p {
+  font-family: 'Roboto', monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+	line-height: 145%;
+	color: $color-black;
+  margin-top: 0;
+  margin-bottom: .8em;
+  display: inline-block;
+}
+
+.center {
+  display: block;
+  text-align: center;
+}
+
+.white {
+  color: $color-white;
+}
+
+.colorblack {
+  color: $color-black;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.subtext {
+  font-size: 2.4em;
+  margin-bottom: 4em;
+}
+
+.copyright {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.textwrapper {
+  padding: 0 3.6em;
+  border-left: 3.6em solid $color-red;
+  max-width: 65em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.innerlinks {
+  color: $color-blue;
+  text-decoration: none;
+}
+.innerlinks:hover, .innerlinks:active {
+  text-decoration: underline;
+}
+
+.innerlinksfix {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  /* The side navigation menu */
+.hidedesktop  {
+  display: none;
+}
+.hidesmall {
+  display: inline-block;
+}
+
+.hamburger {
+  cursor: pointer;
+  font-size: 2.8em;
+  font-weight: regular;
+  color: $color-black;
+  float: right;
+  margin-top: 32px;
+}
+.hamburgerblck {
+    cursor: pointer;
+    font-size: 2.8em;
+    color: $color-black;
+    float: right;
+    margin-top: 32px;
+}
+
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: $color-blue;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.05s;
+  /* 0.5 second transition effect to slide in the sidenav */
+  // -webkit-box-shadow: -5px 0px 10px 0px rgba(63, 63, 63, 0.2);
+  // -moz-box-shadow: -5px 0px 10px 0px rgba(63, 63, 63, 0.2);
+  // box-shadow: -5px 0px 10px 0px rgba(63, 63, 63, 0.2);
+}
+
+/* The navigation menu links */
+.sidenav a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 2.1em;
+  padding: 8px 8px 10px 32px;
+  text-decoration: none;
+  color: $color-black;
+  display: block;
+  text-align: center;
+  transition: 0.3s; }
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: $color-green; }
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  font-size: 36px; }
+
+
+  @media screen and (max-width: 736px) {
+    .poster_bg {
+      height: auto;
+      padding-bottom: 7.2em;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    nav {
+      margin-bottom: 8%;
+    }
+    .spaceoverwrite {
+      margin-bottom: 12%;
+    }
+    .devconlogo {
+      margin: 0 auto 0 auto;
+    }
+    .subtext {
+      font-size: 2.1em;
+    }
+    .devconlogo{
+      height: 12em;
+      width: 16em;
+    }
+    // h1{
+    //   font-size: 6em;
+    // }
+    // h2
+    // {
+    //   font-size: 2.6em;
+    // }
+  }
+
+  // @media screen and (min-width: 1382px) , screen and (max-height: 670px) {
+  //   .poster_bg {
+  //     height: auto;
+  //     padding-bottom: 7.2em;
+  //   }
+  // }
+
+// @media screen and (max-height: 900px) {
+//   .poster_bg {
+//     height: auto;
+//     padding-bottom: 7.2em;
+//   }
+// }
+@media screen and (max-height: 900px) {
+    nav {
+      margin-bottom: 6%;
+    }
+    .spaceoverwrite {
+      margin-bottom: 10%;
+    }
+    // h1 {
+    //   font-size: 5.5em;
+    // }
+    // h2
+    // {
+    //   font-size: 2.1em;
+    // }
+    // .subtext {
+    //   font-size: 1.8em;
+    // }
+    footer {
+    	margin-top: 8%;
+    }
+  }
+@media screen and (max-width: 1299px) {
+  .faq_links {
+  position: initial;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 65em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .topnav  {
+    display: none;
+  }
+  .hidedesktop {
+    display: block;
+  }
+  .hidesmall {
+    display: none;
+  }
+  // .logo {
+  //   display: none;
+  // }
+  .textwrapper {
+  padding: 0 2.8em;
+  // border-left: 6em solid #FF8C8C;
+  }
+  .formbackgroud {
+    padding: 1em 6em 4.8em 6em;
+  }
+  footer {
+  	margin-top: 14%;
+  }
+  .logos li a > img{
+    max-height: 140px;
+    margin: 0 auto 2.1em auto;
+  }
+  ul.logos li img {
+    max-height: 140px;
+    margin: 0 auto 2.1em auto;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  nav ul li a {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .devconlogo{
+    height: 10em;
+    width: 14em;
+  }
+  .textwrapper {
+  padding: 0 2.1em;
+  border-left: 4.8em solid #FF8C8C;
+  }
+  // .left {
+  //   border-left: 4.8em solid $color-red;
+  // }
+  // .right {
+  //   border-right: 4.8em solid $color-blue;
+  // }
+  // .rightphone {
+  //   border-right: 4.8em solid $color-blue;
+  // }
+  .formbackgroud {
+    padding: 1em 4.8em 3.6em 4.8em;
+  }
+  ul.innerlist li {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .footer_navigation {
+    display: none;
+  }
+	// .logo {
+	// 	height: 2.5em;
+	// 	width: 26em;
+	// }
+  .textwrapper {
+    padding: 0 1.8em;
+    border-left: 2em solid #FF8C8C;
+  }
+  .textwrapper > p {
+    font-size: 1.8em;
+  }
+  .left {
+    border-left: 2em solid $color-red;
+  }
+  .right {
+    border-right: 2em solid $color-blue;
+  }
+  .rightphone {
+    border-right: 2em solid $color-blue;
+  }
+  .formbackgroud {
+    padding: 1em 2em 3.6em 2em;
+  }
+  .gmap_canvas {
+    border-left: 2em solid $color-red;
+  }
+  .bio > p {
+    font-size: 1.8em;
+  }
+  .bio > h3 {
+    font-size: 2.6em;
+    margin-top: .8em;
+  }
+  .program h3 {
+    font-size: 2.6em;
+  }
+  .program p {
+    font-size: 1.8em;
+  }
+  ul.program li a {
+    font-size: 1.6em;
+  }
+  ul.program li {
+    margin-bottom: 3.6em;
+  }
+  ul.speakers li {
+  margin-bottom: 6em;
+  }
+  ul.qa li {
+    margin-bottom: 4.8em;
+  }
+  ul.qa h3 {
+    font-size: 2.6em;
+  }
+  ul.qa p {
+    font-size: 1.8em;
+  }
+  h5 {
+    font-size: 3.6em;
+  }
+  ul.innerlist li {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .textwrapper > p {
+    font-size: 1.6em;
+  }
+  .bio > p {
+    font-size: 1.6em;
+  }
+  .bio > h3 {
+    font-size: 2.4em;
+  }
+  .program h3 {
+    font-size: 2.4em;
+  }
+  .program p {
+    font-size: 1.6em;
+  }
+  ul.program li a {
+    font-size: 1.4em;
+  }
+  ul.program li {
+    margin-bottom: 2.8em;
+  }
+  ul.speakers li {
+  margin-bottom: 5.5em;
+  }
+
+  ul.qa h3 {
+    font-size: 2.4em;
+  }
+  ul.qa p {
+    font-size: 1.6em;
+  }
+  ul.innerlist li {
+    margin-bottom: 1em;
+  }
+  ul.innerlist {
+    font-size: 1.6em;
+  }
+  ul.innerlist li {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  ul.speakers li {
+  margin-bottom: 4.8em;
+  }
+}
+@media screen and (max-width: 375px) {
+  .footer__links_wrapper {
+    display: block
+  }
+  .footer__links_wrapper {
+    text-align: center;
+  }
+}

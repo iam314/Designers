@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<title>
+		Melon Designers Team | Welcome
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="DevCon">
+	<meta name="author" content="Lyudmil Dachev">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
+	<!-- Le styles -->
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="Site">
+	<main class="Site-content">
+<section class="gray">
+
+  <nav class="container">
+    <div class="row">
+      <div class="col col--12-of-12">
+        <a href="index.html" class="current-parent logo"></a>
+        <span class="hamburger hidedesktop" onclick="openNav()">☰</span>
+        <ul class="topnav">
+          <li><a href="index.html#whatwedo">What we do</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li class='current'><a class='current' href="about.html">About</a></li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+          <li>
+             <button class="contact-btn">Contact</button>
+           </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="index.html#whatwedo">What we do</a>
+      <a class='current' href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <!-- <a href="contact.html">Contact</a> -->
+       <!-- Trigger/Open The Modal -->
+        <button class="contact-btn">Contact</button>
+
+    </div>
+
+  </nav>
+</section>
+
+<section class="container-fluid gray">
+  <div class="container">
+  <div class="row">
+    <div class="col col--12-of-12">
+      <div class="aboutbox">
+      <h1 class="spacing">Melon UX/UI team.</h1>
+      <p>Anna Notovska, Ali Abdala, Nadya Nikolova and Ivan Savkov are part of the UX/UI and Visual Design Team at Melon. They’re supervised by Valentin Velikov and aided by Margarita Ivanova.</p>
+
+<p>While Ani and Ali are visual designers, Ivan and Nadya are UX designers. The two of them describe their work as building a rocket from scratch. Usually the client says: “I want a rocket to fly to Jupiter.”  And together they specify if he’s going to fly alone, with how much luggage, whether he’s coming back to Earth, etc. When the rocket is ready, they test it with a monkey or Laika... until it’s ready to be flown by the client. When the only questions Nadya and Ivan hear are like “Can we make this button more round”, Ali or Ani step in and make the mobile or web app beautiful and engaging.  </p>
+
+<p>Ani has been with Melon for 8 years, Ali and Nadya started in March and Ivan – in May. Ali saw a friend’s post on Facebook, and Nadya and Ivan don’t recall how they arrived at Melon’s site and the UX/UI job ad. What they remember though is the interview with Valentin – Melon’s head of the design department. “It was a conversation about design, approaches and processes, rather than an interview about my strengths and weaknesses,” Nadya says. “Mine was more than two hours,” Ivan adds. “The longest interview in my life.”
+</p>
+
+<p>Ani’s been a web and graphic designer for 6 years, when in 2007 a friend recommended Melon as a work environment. Previously, Ivan was an art director and Nadya worked at start-ups, where she specialized in user interface. “I was a petty thief,” Ali says. No, he wasn’t, he’s kidding. Immediately after graduating from the National Art Academy, he started at an advertising agency where he stayed 7 years.</p>
+
+<p>At Melon, Ani’s been working on all type of design projects for web and mobile apps, for small and huge companies. Her favorite project is for an online jewelry store that lasted “many years”. </p>
+
+<p>Ivan is currently working on an ERP system and has just finished a GPS mobile app. Nadya and Ali have been involved in digitalizing loyalty cards, rebranding a real estate agency (including new apps, as well as the website front- and back-end), a Canadian educational website and a system for organizing horse shows.</p>
+
+<p>Nadya continues to enjoy the most her work on start-up projects. The clients are open to innovations and creative solutions. Ivan wishes for projects with clients who know exactly what they want.  “Yes, the shorter and the more concise a brief is, the better the clients know what their goals are,” Nadya says. And for the moment, Ali is very happy with supporting visually the projects of the rest of the designers.</p>
+
+<p>At Melon, Nadya would like to learn how to communicate with clients the way Valentin does – enchanting them and leaving them speechless. Ali says he’s already learning a lot and developing his graphical style. </p>
+
+<p>Ivan wishes for more patience. And that’s exactly what Ani’s acquired for 8 years at Melon while working with a great variety of clients. She would like more interesting, design-first projects at Melon. With all her experience, Ani prefers working on brand new small projects that start from ground zero. To her, working with big corporate clients is a drag.</p>
+
+<p>All the designers crave for more windows at the Melon headquarter office and more scooters to sprint the long corridor. But as long as there’s foosball and table tennis, it’s all good.</p>
+
+<p>What Ani likes the most at Melon is the working environment. “It’s very human-friendly,” she says. Besides progressing professionally, she learned a lot of things about her character and could develop personally. To Ivan the best part is that Melon is just chill. </p>
+
+<p>Here, Nadya likes the most the design team, except for when Valentin makes grammar mistakes. Ali is glad that the developers turned out to be very nice people. Before starting at Melon he thought they are an introvert and unsociable tribe. Ivan’s experience at his previous jobs was bitter too. He says working with developers was tough because their answer was always ‘no’ and he felt as if his hands were tied to his legs, which is not the case at Melon. Here the developers come and ask the designers for this and that and how they could make things cooler.</p>
+
+<p>Another nice surprise to Ali was finding out how many people at Melon can play and sing really well. And quickly he became one of the back vocalists of Melon’s band - The Tarricates. Besides that, he’s part of another band – Macrophone, which is about to release its second album. Ali also does yoga, plays RTS games and paints. In her free time, Ani likes hiking, national folklore dancing and opera singing. “And I’m a superhero,” Nadya says. Ivan likes hanging out with friends and going out of Sofia as often as possible, preferably in the wild where he can exercise his hobby – photography.</p>
+
+<p>By the way, the UX designer term comes very handy to Ivan when he is picking up girls. He just drops it, explains the cool things he does, because rarely anybody knows what it means, and the job is half done. Ali’s had similar experience but in a slightly different context – at his Melon interview. He remembers that Valentin talked about wireframes and information architecture and just like Ivan’s girls he stared back at him emptily. But a couple of months later, it’s all clear. Together with the rest of the UX/UI and Visual Design Team they’re crafting beautiful experiences for the end users.</p>
+
+</div>
+</div>
+    <a class="ctabutton2" href="registration.html">Let's talk</a>
+    </div>
+  </div>
+</section>
+
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<h3>email:</h3><br>
+		<p>design@melontech.com</p><br>
+		<h3>Behace</h3><br>
+		<p>www.behance.net/design9859</p><br>
+		<h3>Office</h3><br>
+		<p>20 Kosta Lulchev, 3rd floor.<br>
+1113, Sofia, Bulgaria.</p><br>
+<h3>Melon</h3><br>
+<p>www.melontech.com</p>
+	</div>
+
+</div>
+
+
+
+</main>
+<section>
+	<footer class="container-fluid">
+		<div class="row">
+			<div class="col col--12-of-12">
+				<a href="index.html" class="current-parent footerlogo"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--9-of-12 col col--centered">
+				<div class="footer_navigation">
+					<ul>
+						<li><a href="index.html#whatwedo">What we do</a></li>
+						<li><a href="work.html">Work</a></li>
+						<li class='current'><a class='current' href="about.html">About</a></li>
+						<li><button class="contact-btn">Contact</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--12-of-12">
+				<p class="copyright">Terms of Use | Privacy Policy | Cookie Policy | ©2019 Melon, Inc. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+</section>
+
+<script type="text/javascript">
+	/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "60%";
+		document.getElementById("main").style.marginLeft = "100px";
+	}
+
+	/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft = "0";
+	}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("contact-btn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+
+for (let item of btn) {
+	item.onclick = function() {
+	  modal.style.display = "block";
+	}
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+
+</html>
